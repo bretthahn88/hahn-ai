@@ -50,19 +50,19 @@ const INDUSTRIES = [
 const PRINCIPALS = [
   {
     name: 'Dr. William Hahn',
-    title: 'Chief Executive Officer',
+    title: 'AI Research & Technical Architecture',
     credentials: 'AI Scientist · FAU AI & Robotics Lab · Pure Cipher CSO',
     bio: 'Research-grade AI expertise applied to commercial operations. Brings the rigor of a lab to the discipline of a business.',
   },
   {
     name: 'Brett Hahn',
-    title: 'Chief Strategy & Growth Officer',
+    title: 'Commercial Strategy & Client Advisory',
     credentials: '15+ Years Marketing Technology · CRM · Digital Transformation',
     bio: 'Translates technical AI capability into commercial strategy. Identifies where automation creates durable operational leverage.',
   },
   {
     name: 'Chris Hahn',
-    title: 'Chief Implementation & Compliance Officer',
+    title: 'Implementation & Compliance',
     credentials: 'Technical Deployment · Quality Management · Regulatory Compliance',
     bio: 'Ensures every implementation is documented, auditable, and built to last. Primary point of contact after deployment.',
   },
@@ -153,7 +153,7 @@ export default function HomePage() {
           <p
             style={{
               fontFamily: MONO,
-              fontSize: 12,
+              fontSize: '1.1rem',
               lineHeight: 1.95,
               color: WD,
               maxWidth: 500,
@@ -246,25 +246,24 @@ export default function HomePage() {
         }}
       >
         <div
-          className="grid-3col"
+          className="grid-2col"
           style={{
             maxWidth: 1200,
             margin: '0 auto',
             display: 'grid',
-            gridTemplateColumns: 'repeat(3, 1fr)',
+            gridTemplateColumns: 'repeat(2, 1fr)',
           }}
         >
           {[
-            { stat: '3', label: 'Regions Served' },
-            { stat: '15+', label: 'Years in Technology & Transformation' },
-            { stat: '$2M – $50M', label: 'Target Client Revenue' },
+            { stat: 'Nationwide', label: 'Service Area' },
+            { stat: '20+', label: 'Years of Combined AI Experience' },
           ].map(({ stat, label }, i) => (
             <div
               key={stat}
               className="card"
               style={{
                 padding: '48px 40px',
-                borderRight: i < 2 ? `1px solid ${BORDER}` : 'none',
+                borderRight: i < 1 ? `1px solid ${BORDER}` : 'none',
               }}
             >
               <div
@@ -382,7 +381,7 @@ export default function HomePage() {
                 <p
                   style={{
                     fontFamily: MONO,
-                    fontSize: 11,
+                    fontSize: '1.1rem',
                     lineHeight: 1.95,
                     color: 'rgba(245, 245, 240, 0.45)',
                   }}
@@ -470,7 +469,7 @@ export default function HomePage() {
             <p
               style={{
                 fontFamily: MONO,
-                fontSize: 11,
+                fontSize: '1.1rem',
                 lineHeight: 2.0,
                 color: WD,
                 maxWidth: 440,
@@ -525,7 +524,7 @@ export default function HomePage() {
               <p
                 style={{
                   fontFamily: MONO,
-                  fontSize: 11,
+                  fontSize: '1.1rem',
                   lineHeight: 1.9,
                   color: WF,
                   fontStyle: 'italic',
@@ -638,7 +637,7 @@ export default function HomePage() {
                 <p
                   style={{
                     fontFamily: MONO,
-                    fontSize: 11,
+                    fontSize: '1.1rem',
                     lineHeight: 1.95,
                     color: 'rgba(245, 245, 240, 0.48)',
                   }}

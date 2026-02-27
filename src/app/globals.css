@@ -27,7 +27,7 @@ body {
   background-color: var(--black);
   color: var(--white);
   font-family: var(--font-plex-mono), 'Courier New', monospace;
-  font-size: 13px;
+  font-size: 1.1rem;
   line-height: 1.85;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
