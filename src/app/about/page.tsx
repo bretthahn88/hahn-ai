@@ -74,7 +74,10 @@ export default function AboutPage() {
   return (
     <>
       {/* ── PAGE HERO ────────────────────────────────────────────────── */}
-      <section style={{ padding: '192px 56px 96px', borderBottom: `1px solid ${BORDER}` }}>
+      <section
+        className="sec-hero"
+        style={{ padding: '192px 56px 96px', borderBottom: `1px solid ${BORDER}` }}
+      >
         <div style={{ maxWidth: 1200, margin: '0 auto' }}>
           <div
             style={{
@@ -91,7 +94,7 @@ export default function AboutPage() {
           <h1
             style={{
               fontFamily: SERIF,
-              fontSize: 'clamp(60px, 8vw, 100px)',
+              fontSize: 'clamp(56px, 8vw, 100px)',
               fontWeight: 300,
               color: W,
               lineHeight: 0.95,
@@ -118,8 +121,12 @@ export default function AboutPage() {
       </section>
 
       {/* ── PHILOSOPHY ───────────────────────────────────────────────── */}
-      <section style={{ padding: '96px 56px', borderBottom: `1px solid ${BORDER}` }}>
+      <section
+        className="sec"
+        style={{ padding: '96px 56px', borderBottom: `1px solid ${BORDER}` }}
+      >
         <div
+          className="grid-2col"
           style={{
             maxWidth: 1200,
             margin: '0 auto',
@@ -172,12 +179,7 @@ export default function AboutPage() {
               reputation is attached to every engagement we accept.
             </p>
             <p
-              style={{
-                fontFamily: MONO,
-                fontSize: 12,
-                lineHeight: 2.0,
-                color: WD,
-              }}
+              style={{ fontFamily: MONO, fontSize: 12, lineHeight: 2.0, color: WD }}
             >
               We take a limited number of clients at any time. We begin with an
               audit — not a pitch. And we measure success by operational outcomes,
@@ -188,7 +190,7 @@ export default function AboutPage() {
       </section>
 
       {/* ── FOUNDERS ─────────────────────────────────────────────────── */}
-      <section style={{ padding: '96px 56px' }}>
+      <section className="sec" style={{ padding: '96px 56px' }}>
         <div style={{ maxWidth: 1200, margin: '0 auto' }}>
           <div style={{ marginBottom: 64 }}>
             <div
@@ -206,7 +208,7 @@ export default function AboutPage() {
             <h2
               style={{
                 fontFamily: SERIF,
-                fontSize: 'clamp(38px, 4.5vw, 58px)',
+                fontSize: 'clamp(36px, 4.5vw, 58px)',
                 fontWeight: 300,
                 color: W,
               }}
@@ -219,6 +221,7 @@ export default function AboutPage() {
             {FOUNDERS.map((f) => (
               <div
                 key={f.index}
+                className="grid-2col card"
                 style={{
                   border: `1px solid ${BORDER}`,
                   padding: '60px 52px',
@@ -276,11 +279,7 @@ export default function AboutPage() {
                     {f.credentials.map((c) => (
                       <div
                         key={c}
-                        style={{
-                          display: 'flex',
-                          alignItems: 'flex-start',
-                          gap: 12,
-                        }}
+                        style={{ display: 'flex', alignItems: 'flex-start', gap: 12 }}
                       >
                         <span
                           style={{
@@ -331,6 +330,7 @@ export default function AboutPage() {
 
       {/* ── REGIONS ──────────────────────────────────────────────────── */}
       <section
+        className="sec"
         style={{
           padding: '96px 56px',
           borderTop: `1px solid ${BORDER}`,
@@ -355,7 +355,7 @@ export default function AboutPage() {
             <h2
               style={{
                 fontFamily: SERIF,
-                fontSize: 'clamp(38px, 4.5vw, 52px)',
+                fontSize: 'clamp(36px, 4.5vw, 52px)',
                 fontWeight: 300,
                 color: W,
               }}
@@ -367,6 +367,7 @@ export default function AboutPage() {
           </div>
 
           <div
+            className="grid-3col"
             style={{
               display: 'grid',
               gridTemplateColumns: 'repeat(3, 1fr)',
@@ -377,10 +378,8 @@ export default function AboutPage() {
             {REGIONS.map((r, i) => (
               <div
                 key={r.name}
-                style={{
-                  padding: '44px 40px',
-                  border: `1px solid ${BORDER}`,
-                }}
+                className="card"
+                style={{ padding: '44px 40px', border: `1px solid ${BORDER}` }}
               >
                 <div
                   style={{
@@ -422,12 +421,11 @@ export default function AboutPage() {
 
       {/* ── CTA ──────────────────────────────────────────────────────── */}
       <section
-        style={{
-          borderTop: `1px solid ${BORDER}`,
-          padding: '96px 56px',
-        }}
+        className="sec"
+        style={{ borderTop: `1px solid ${BORDER}`, padding: '96px 56px' }}
       >
         <div
+          className="cta-row"
           style={{
             maxWidth: 1200,
             margin: '0 auto',
@@ -449,19 +447,13 @@ export default function AboutPage() {
             >
               Start with a conversation.
             </h2>
-            <p
-              style={{
-                fontFamily: MONO,
-                fontSize: 11,
-                color: WD,
-                letterSpacing: '0.04em',
-              }}
-            >
+            <p style={{ fontFamily: MONO, fontSize: 11, color: WD, letterSpacing: '0.04em' }}>
               A 30-minute discovery call. No pitch. No obligation.
             </p>
           </div>
           <Link
             href="/contact"
+            className="btn-full"
             style={{
               fontFamily: MONO,
               fontSize: 12,
@@ -472,6 +464,8 @@ export default function AboutPage() {
               color: '#080808',
               fontWeight: 500,
               flexShrink: 0,
+              display: 'inline-block',
+              textAlign: 'center',
             }}
           >
             Book an Audit →

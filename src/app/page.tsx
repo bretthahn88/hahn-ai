@@ -76,7 +76,7 @@ export default function HomePage() {
         style={{
           position: 'relative',
           height: '100vh',
-          minHeight: 700,
+          minHeight: 600,
           display: 'flex',
           alignItems: 'center',
           overflow: 'hidden',
@@ -96,6 +96,7 @@ export default function HomePage() {
 
         {/* Content */}
         <div
+          className="hero-wrap"
           style={{
             position: 'relative',
             zIndex: 10,
@@ -135,7 +136,7 @@ export default function HomePage() {
           <h1
             style={{
               fontFamily: SERIF,
-              fontSize: 'clamp(70px, 9.5vw, 120px)',
+              fontSize: 'clamp(48px, 9.5vw, 120px)',
               fontWeight: 300,
               lineHeight: 0.95,
               color: W,
@@ -168,7 +169,7 @@ export default function HomePage() {
           </p>
 
           {/* CTAs */}
-          <div style={{ display: 'flex', gap: 16, alignItems: 'center' }}>
+          <div className="hero-ctas" style={{ display: 'flex', gap: 16, alignItems: 'center' }}>
             <Link
               href="/contact"
               style={{
@@ -229,8 +230,7 @@ export default function HomePage() {
             style={{
               width: 1,
               height: 44,
-              background:
-                'linear-gradient(to bottom, rgba(201,168,76,0.35), transparent)',
+              background: 'linear-gradient(to bottom, rgba(201,168,76,0.35), transparent)',
             }}
           />
         </div>
@@ -238,6 +238,7 @@ export default function HomePage() {
 
       {/* ── STATS BAND ───────────────────────────────────────────────── */}
       <section
+        className="pad-x"
         style={{
           borderTop: `1px solid ${BORDER}`,
           borderBottom: `1px solid ${BORDER}`,
@@ -245,6 +246,7 @@ export default function HomePage() {
         }}
       >
         <div
+          className="grid-3col"
           style={{
             maxWidth: 1200,
             margin: '0 auto',
@@ -259,6 +261,7 @@ export default function HomePage() {
           ].map(({ stat, label }, i) => (
             <div
               key={stat}
+              className="card"
               style={{
                 padding: '48px 40px',
                 borderRight: i < 2 ? `1px solid ${BORDER}` : 'none',
@@ -293,9 +296,8 @@ export default function HomePage() {
       </section>
 
       {/* ── SERVICES OVERVIEW ────────────────────────────────────────── */}
-      <section style={{ padding: '120px 56px' }}>
+      <section className="sec" style={{ padding: '120px 56px' }}>
         <div style={{ maxWidth: 1200, margin: '0 auto' }}>
-          {/* Section header */}
           <div style={{ marginBottom: 64 }}>
             <div
               style={{
@@ -312,7 +314,7 @@ export default function HomePage() {
             <h2
               style={{
                 fontFamily: SERIF,
-                fontSize: 'clamp(42px, 5vw, 64px)',
+                fontSize: 'clamp(36px, 5vw, 64px)',
                 fontWeight: 300,
                 color: W,
               }}
@@ -325,6 +327,7 @@ export default function HomePage() {
 
           {/* Service cards */}
           <div
+            className="grid-2col"
             style={{
               display: 'grid',
               gridTemplateColumns: 'repeat(2, 1fr)',
@@ -335,6 +338,7 @@ export default function HomePage() {
             {SERVICES.map((s) => (
               <div
                 key={s.index}
+                className="card"
                 style={{
                   padding: '48px 44px',
                   border: `1px solid ${BORDER}`,
@@ -414,6 +418,7 @@ export default function HomePage() {
 
       {/* ── WHO WE SERVE ─────────────────────────────────────────────── */}
       <section
+        className="sec"
         style={{
           padding: '120px 56px',
           borderTop: `1px solid ${BORDER}`,
@@ -422,6 +427,7 @@ export default function HomePage() {
         }}
       >
         <div
+          className="grid-2col"
           style={{
             maxWidth: 1200,
             margin: '0 auto',
@@ -448,7 +454,7 @@ export default function HomePage() {
             <h2
               style={{
                 fontFamily: SERIF,
-                fontSize: 'clamp(38px, 4.5vw, 58px)',
+                fontSize: 'clamp(36px, 4.5vw, 58px)',
                 fontWeight: 300,
                 color: W,
                 marginBottom: 32,
@@ -491,13 +497,7 @@ export default function HomePage() {
             >
               Industries we serve
             </div>
-            <div
-              style={{
-                display: 'flex',
-                flexWrap: 'wrap',
-                gap: 10,
-              }}
-            >
+            <div style={{ display: 'flex', flexWrap: 'wrap', gap: 10 }}>
               {INDUSTRIES.map((ind) => (
                 <span
                   key={ind}
@@ -542,10 +542,8 @@ export default function HomePage() {
 
       {/* ── THE PRINCIPALS ───────────────────────────────────────────── */}
       <section
-        style={{
-          padding: '120px 56px',
-          borderTop: `1px solid ${BORDER}`,
-        }}
+        className="sec"
+        style={{ padding: '120px 56px', borderTop: `1px solid ${BORDER}` }}
       >
         <div style={{ maxWidth: 1200, margin: '0 auto' }}>
           <div style={{ marginBottom: 64 }}>
@@ -564,7 +562,7 @@ export default function HomePage() {
             <h2
               style={{
                 fontFamily: SERIF,
-                fontSize: 'clamp(38px, 4.5vw, 58px)',
+                fontSize: 'clamp(36px, 4.5vw, 58px)',
                 fontWeight: 300,
                 color: W,
               }}
@@ -576,6 +574,7 @@ export default function HomePage() {
           </div>
 
           <div
+            className="grid-3col"
             style={{
               display: 'grid',
               gridTemplateColumns: 'repeat(3, 1fr)',
@@ -586,10 +585,8 @@ export default function HomePage() {
             {PRINCIPALS.map((p, i) => (
               <div
                 key={p.name}
-                style={{
-                  padding: '44px 40px',
-                  border: `1px solid ${BORDER}`,
-                }}
+                className="card"
+                style={{ padding: '44px 40px', border: `1px solid ${BORDER}` }}
               >
                 <div
                   style={{
@@ -677,6 +674,7 @@ export default function HomePage() {
 
       {/* ── CTA BANNER ───────────────────────────────────────────────── */}
       <section
+        className="sec"
         style={{
           borderTop: `1px solid ${BORDER}`,
           padding: '100px 56px',
@@ -685,6 +683,7 @@ export default function HomePage() {
         }}
       >
         <div
+          className="cta-row"
           style={{
             maxWidth: 1200,
             margin: '0 auto',
@@ -710,7 +709,7 @@ export default function HomePage() {
             <h2
               style={{
                 fontFamily: SERIF,
-                fontSize: 'clamp(38px, 4.5vw, 60px)',
+                fontSize: 'clamp(36px, 4.5vw, 60px)',
                 fontWeight: 300,
                 color: W,
                 lineHeight: 1.05,
@@ -724,6 +723,7 @@ export default function HomePage() {
           <div style={{ flexShrink: 0 }}>
             <Link
               href="/contact"
+              className="btn-full"
               style={{
                 fontFamily: MONO,
                 fontSize: 12,

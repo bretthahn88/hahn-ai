@@ -101,7 +101,10 @@ export default function ServicesPage() {
   return (
     <>
       {/* ── PAGE HERO ────────────────────────────────────────────────── */}
-      <section style={{ padding: '192px 56px 96px', borderBottom: `1px solid ${BORDER}` }}>
+      <section
+        className="sec-hero"
+        style={{ padding: '192px 56px 96px', borderBottom: `1px solid ${BORDER}` }}
+      >
         <div style={{ maxWidth: 1200, margin: '0 auto' }}>
           <div
             style={{
@@ -118,7 +121,7 @@ export default function ServicesPage() {
           <h1
             style={{
               fontFamily: SERIF,
-              fontSize: 'clamp(60px, 8vw, 100px)',
+              fontSize: 'clamp(56px, 8vw, 100px)',
               fontWeight: 300,
               color: W,
               lineHeight: 0.95,
@@ -144,12 +147,13 @@ export default function ServicesPage() {
       </section>
 
       {/* ── SERVICE CARDS ────────────────────────────────────────────── */}
-      <section style={{ padding: '96px 56px' }}>
+      <section className="sec" style={{ padding: '96px 56px' }}>
         <div style={{ maxWidth: 1200, margin: '0 auto' }}>
           <div style={{ display: 'flex', flexDirection: 'column', gap: 2 }}>
             {SERVICES.map((s) => (
               <div
                 key={s.index}
+                className="grid-2col card"
                 style={{
                   border: `1px solid ${BORDER}`,
                   padding: '56px 52px',
@@ -195,43 +199,30 @@ export default function ServicesPage() {
                   >
                     {s.price}
                   </div>
-                  <div
-                    style={{
-                      display: 'flex',
-                      gap: 28,
-                      marginBottom: 32,
-                    }}
-                  >
-                    <div>
-                      <div
-                        style={{
-                          fontFamily: MONO,
-                          fontSize: 9,
-                          letterSpacing: '0.2em',
-                          textTransform: 'uppercase',
-                          color: 'rgba(245, 245, 240, 0.28)',
-                          marginBottom: 6,
-                        }}
-                      >
-                        Timeline
-                      </div>
-                      <div
-                        style={{
-                          fontFamily: MONO,
-                          fontSize: 11,
-                          color: 'rgba(245, 245, 240, 0.55)',
-                        }}
-                      >
-                        {s.timeline}
-                      </div>
+                  <div style={{ marginBottom: 32 }}>
+                    <div
+                      style={{
+                        fontFamily: MONO,
+                        fontSize: 9,
+                        letterSpacing: '0.2em',
+                        textTransform: 'uppercase',
+                        color: 'rgba(245, 245, 240, 0.28)',
+                        marginBottom: 6,
+                      }}
+                    >
+                      Timeline
+                    </div>
+                    <div
+                      style={{
+                        fontFamily: MONO,
+                        fontSize: 11,
+                        color: 'rgba(245, 245, 240, 0.55)',
+                      }}
+                    >
+                      {s.timeline}
                     </div>
                   </div>
-                  <div
-                    style={{
-                      paddingTop: 28,
-                      borderTop: `1px solid ${BORDER}`,
-                    }}
-                  >
+                  <div style={{ paddingTop: 28, borderTop: `1px solid ${BORDER}` }}>
                     <div
                       style={{
                         fontFamily: MONO,
@@ -286,11 +277,7 @@ export default function ServicesPage() {
                     {s.includes.map((item) => (
                       <div
                         key={item}
-                        style={{
-                          display: 'flex',
-                          alignItems: 'flex-start',
-                          gap: 14,
-                        }}
+                        style={{ display: 'flex', alignItems: 'flex-start', gap: 14 }}
                       >
                         <span
                           style={{
@@ -324,6 +311,7 @@ export default function ServicesPage() {
 
       {/* ── HOW WE ENGAGE ────────────────────────────────────────────── */}
       <section
+        className="sec"
         style={{
           padding: '96px 56px',
           borderTop: `1px solid ${BORDER}`,
@@ -348,7 +336,7 @@ export default function ServicesPage() {
             <h2
               style={{
                 fontFamily: SERIF,
-                fontSize: 'clamp(38px, 4.5vw, 58px)',
+                fontSize: 'clamp(36px, 4.5vw, 58px)',
                 fontWeight: 300,
                 color: W,
               }}
@@ -360,6 +348,7 @@ export default function ServicesPage() {
           </div>
 
           <div
+            className="grid-4col"
             style={{
               display: 'grid',
               gridTemplateColumns: 'repeat(4, 1fr)',
@@ -367,13 +356,11 @@ export default function ServicesPage() {
               border: `1px solid ${BORDER}`,
             }}
           >
-            {PROCESS.map((p, i) => (
+            {PROCESS.map((p) => (
               <div
                 key={p.step}
-                style={{
-                  padding: '40px 36px',
-                  border: `1px solid ${BORDER}`,
-                }}
+                className="card"
+                style={{ padding: '40px 36px', border: `1px solid ${BORDER}` }}
               >
                 <div
                   style={{
@@ -415,12 +402,11 @@ export default function ServicesPage() {
 
       {/* ── CTA ──────────────────────────────────────────────────────── */}
       <section
-        style={{
-          borderTop: `1px solid ${BORDER}`,
-          padding: '96px 56px',
-        }}
+        className="sec"
+        style={{ borderTop: `1px solid ${BORDER}`, padding: '96px 56px' }}
       >
         <div
+          className="cta-row"
           style={{
             maxWidth: 1200,
             margin: '0 auto',
@@ -443,18 +429,14 @@ export default function ServicesPage() {
               Ready to begin?
             </h2>
             <p
-              style={{
-                fontFamily: MONO,
-                fontSize: 11,
-                color: WD,
-                letterSpacing: '0.04em',
-              }}
+              style={{ fontFamily: MONO, fontSize: 11, color: WD, letterSpacing: '0.04em' }}
             >
               Most engagements start with a 30-minute discovery call.
             </p>
           </div>
           <Link
             href="/contact"
+            className="btn-full"
             style={{
               fontFamily: MONO,
               fontSize: 12,
@@ -465,6 +447,8 @@ export default function ServicesPage() {
               color: '#080808',
               fontWeight: 500,
               flexShrink: 0,
+              display: 'inline-block',
+              textAlign: 'center',
             }}
           >
             Book an Audit →

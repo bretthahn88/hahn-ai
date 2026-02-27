@@ -100,3 +100,74 @@ input, textarea, select {
   max-width: var(--max-width);
   margin: 0 auto;
 }
+
+/* ─────────────────────────────────────────────────────────
+   RESPONSIVE SYSTEM — breakpoint ≤ 768px
+   !important overrides inline styles in JSX components.
+───────────────────────────────────────────────────────── */
+
+/* Desktop defaults for toggle elements */
+.nav-links     { display: flex; }
+.nav-hamburger { display: none; }
+
+@media (max-width: 768px) {
+
+  /* ── Navigation ─────────────────────────────── */
+  .nav-wrapper  { padding: 20px 24px !important; }
+  .nav-links    { display: none !important; }
+  .nav-hamburger {
+    display: flex !important;
+    flex-direction: column;
+    gap: 5px;
+    align-items: center;
+    justify-content: center;
+  }
+
+  /* ── Section padding ─────────────────────────── */
+  .sec      { padding: 64px 24px !important; }
+  .sec-hero { padding: 140px 24px 56px !important; }
+  .pad-x    { padding-left: 24px !important; padding-right: 24px !important; }
+  .hero-wrap { padding-left: 24px !important; padding-right: 24px !important; }
+
+  /* ── Grids → single column ───────────────────── */
+  .grid-2col,
+  .grid-3col,
+  .grid-4col {
+    grid-template-columns: 1fr !important;
+    gap: 40px !important;
+  }
+
+  /* ── Flex CTA rows → stack ───────────────────── */
+  .cta-row {
+    flex-direction: column !important;
+    align-items: flex-start !important;
+    gap: 24px !important;
+  }
+
+  /* ── Full-width buttons ──────────────────────── */
+  .btn-full {
+    width: 100% !important;
+    text-align: center !important;
+    display: block !important;
+    box-sizing: border-box !important;
+  }
+
+  /* ── Hero CTA pair ───────────────────────────── */
+  .hero-ctas {
+    flex-direction: column !important;
+    width: 100% !important;
+    gap: 12px !important;
+  }
+  .hero-ctas a {
+    width: 100% !important;
+    text-align: center !important;
+    box-sizing: border-box !important;
+    display: block !important;
+  }
+
+  /* ── Card inner padding ──────────────────────── */
+  .card { padding: 32px 24px !important; }
+
+  /* ── Misc ────────────────────────────────────── */
+  html { cursor: auto; }   /* restore default cursor on touch devices */
+}

@@ -1,6 +1,7 @@
 'use client'
 
 import { useState } from 'react'
+import Link from 'next/link'
 
 const G = '#C9A84C'
 const W = '#F5F5F0'
@@ -12,7 +13,7 @@ const SERIF = 'var(--font-cormorant)'
 const inputStyle = {
   width: '100%',
   background: 'rgba(245, 245, 240, 0.03)',
-  border: `1px solid rgba(201, 168, 76, 0.2)`,
+  border: '1px solid rgba(201, 168, 76, 0.2)',
   padding: '14px 18px',
   fontFamily: MONO,
   fontSize: 12,
@@ -76,7 +77,10 @@ export default function ContactPage() {
   return (
     <>
       {/* ── PAGE HERO ────────────────────────────────────────────────── */}
-      <section style={{ padding: '192px 56px 96px', borderBottom: `1px solid ${BORDER}` }}>
+      <section
+        className="sec-hero"
+        style={{ padding: '192px 56px 96px', borderBottom: `1px solid ${BORDER}` }}
+      >
         <div style={{ maxWidth: 1200, margin: '0 auto' }}>
           <div
             style={{
@@ -93,7 +97,7 @@ export default function ContactPage() {
           <h1
             style={{
               fontFamily: SERIF,
-              fontSize: 'clamp(60px, 8vw, 100px)',
+              fontSize: 'clamp(56px, 8vw, 100px)',
               fontWeight: 300,
               color: W,
               lineHeight: 0.95,
@@ -121,8 +125,9 @@ export default function ContactPage() {
       </section>
 
       {/* ── FORM + SIDEBAR ────────────────────────────────────────────── */}
-      <section style={{ padding: '96px 56px' }}>
+      <section className="sec" style={{ padding: '96px 56px' }}>
         <div
+          className="grid-2col"
           style={{
             maxWidth: 1200,
             margin: '0 auto',
@@ -143,13 +148,7 @@ export default function ContactPage() {
                 gap: 24,
               }}
             >
-              <div
-                style={{
-                  width: 40,
-                  height: 1,
-                  background: G,
-                }}
-              />
+              <div style={{ width: 40, height: 1, background: G }} />
               <h2
                 style={{
                   fontFamily: SERIF,
@@ -190,11 +189,8 @@ export default function ContactPage() {
               >
                 {/* Name + Company */}
                 <div
-                  style={{
-                    display: 'grid',
-                    gridTemplateColumns: '1fr 1fr',
-                    gap: 24,
-                  }}
+                  className="grid-2col"
+                  style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: 24 }}
                 >
                   <div>
                     <label style={labelStyle}>Full Name *</label>
@@ -222,11 +218,8 @@ export default function ContactPage() {
 
                 {/* Email + Phone */}
                 <div
-                  style={{
-                    display: 'grid',
-                    gridTemplateColumns: '1fr 1fr',
-                    gap: 24,
-                  }}
+                  className="grid-2col"
+                  style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: 24 }}
                 >
                   <div>
                     <label style={labelStyle}>Email Address *</label>
@@ -255,11 +248,8 @@ export default function ContactPage() {
 
                 {/* Employees + Revenue */}
                 <div
-                  style={{
-                    display: 'grid',
-                    gridTemplateColumns: '1fr 1fr',
-                    gap: 24,
-                  }}
+                  className="grid-2col"
+                  style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: 24 }}
                 >
                   <div>
                     <label style={labelStyle}>Number of Employees *</label>
@@ -270,9 +260,7 @@ export default function ContactPage() {
                       onChange={handleChange}
                       required
                     >
-                      <option value="" disabled>
-                        Select range
-                      </option>
+                      <option value="" disabled>Select range</option>
                       <option value="1-9">1 – 9</option>
                       <option value="10-25">10 – 25</option>
                       <option value="26-50">26 – 50</option>
@@ -290,9 +278,7 @@ export default function ContactPage() {
                       onChange={handleChange}
                       required
                     >
-                      <option value="" disabled>
-                        Select range
-                      </option>
+                      <option value="" disabled>Select range</option>
                       <option value="under-2m">Under $2M</option>
                       <option value="2m-5m">$2M – $5M</option>
                       <option value="5m-15m">$5M – $15M</option>
@@ -304,16 +290,9 @@ export default function ContactPage() {
 
                 {/* Challenge */}
                 <div>
-                  <label style={labelStyle}>
-                    Primary Challenge or Goal *
-                  </label>
+                  <label style={labelStyle}>Primary Challenge or Goal *</label>
                   <textarea
-                    style={{
-                      ...inputStyle,
-                      resize: 'vertical',
-                      minHeight: 120,
-                      lineHeight: 1.85,
-                    }}
+                    style={{ ...inputStyle, resize: 'vertical', minHeight: 120, lineHeight: 1.85 }}
                     name="challenge"
                     value={form.challenge}
                     onChange={handleChange}
@@ -336,6 +315,7 @@ export default function ContactPage() {
 
                 {/* Submit */}
                 <div
+                  className="cta-row"
                   style={{
                     paddingTop: 8,
                     display: 'flex',
@@ -356,6 +336,7 @@ export default function ContactPage() {
                   </span>
                   <button
                     type="submit"
+                    className="btn-full"
                     style={{
                       fontFamily: MONO,
                       fontSize: 12,
@@ -380,10 +361,8 @@ export default function ContactPage() {
             {NEXT_STEPS.map((s) => (
               <div
                 key={s.n}
-                style={{
-                  border: `1px solid ${BORDER}`,
-                  padding: '32px 28px',
-                }}
+                className="card"
+                style={{ border: `1px solid ${BORDER}`, padding: '32px 28px' }}
               >
                 <div
                   style={{
@@ -420,12 +399,12 @@ export default function ContactPage() {
               </div>
             ))}
 
-            {/* Note */}
+            {/* Capacity note */}
             <div
               style={{
                 marginTop: 8,
                 padding: '28px',
-                border: `1px solid rgba(201, 168, 76, 0.08)`,
+                border: '1px solid rgba(201, 168, 76, 0.08)',
                 background: 'rgba(201, 168, 76, 0.03)',
               }}
             >
