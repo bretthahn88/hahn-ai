@@ -129,7 +129,7 @@ export default function HomePage() {
                 flexShrink: 0,
               }}
             />
-            Boutique AI Advisory · Three Regions
+            Where AI Meets Operational Discipline
           </div>
 
           {/* Headline */}

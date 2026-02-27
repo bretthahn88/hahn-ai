@@ -15,7 +15,7 @@ export default function Footer() {
           maxWidth: 1200,
           margin: '0 auto',
           display: 'grid',
-          gridTemplateColumns: '1.4fr 1fr 1fr',
+          gridTemplateColumns: '1.4fr 1fr',
           gap: 64,
           marginBottom: 56,
         }}
@@ -90,40 +90,6 @@ export default function Footer() {
           </div>
         </div>
 
-        {/* Regions */}
-        <div>
-          <div
-            style={{
-              fontFamily: 'var(--font-plex-mono)',
-              fontSize: 10,
-              letterSpacing: '0.22em',
-              textTransform: 'uppercase',
-              color: '#C9A84C',
-              marginBottom: 24,
-            }}
-          >
-            Regions
-          </div>
-          <div style={{ display: 'flex', flexDirection: 'column', gap: 14 }}>
-            {[
-              'Northeast Indiana',
-              'South Florida',
-              'Eastern North Carolina',
-            ].map((r) => (
-              <span
-                key={r}
-                style={{
-                  fontFamily: 'var(--font-plex-mono)',
-                  fontSize: 11,
-                  color: 'rgba(245, 245, 240, 0.38)',
-                  letterSpacing: '0.04em',
-                }}
-              >
-                {r}
-              </span>
-            ))}
-          </div>
-        </div>
       </div>
 
       {/* Bottom bar */}
