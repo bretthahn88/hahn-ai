@@ -1,33 +1,43 @@
 :root {
-  --background: #ffffff;
-  --foreground: #171717;
+  --black: #080808;
+  --gold: #C9A84C;
+  --gold-faint: rgba(201, 168, 76, 0.07);
+  --gold-dim: rgba(201, 168, 76, 0.15);
+  --gold-mid: rgba(201, 168, 76, 0.4);
+  --white: #F5F5F0;
+  --white-dim: rgba(245, 245, 240, 0.55);
+  --white-faint: rgba(245, 245, 240, 0.25);
+  --border: rgba(201, 168, 76, 0.14);
+  --section-pad: 128px 56px;
+  --max-width: 1200px;
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
+*, *::before, *::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
 }
 
-html,
+html {
+  cursor: none;
+  scroll-behavior: smooth;
+}
+
 body {
-  max-width: 100vw;
+  background-color: var(--black);
+  color: var(--white);
+  font-family: var(--font-plex-mono), 'Courier New', monospace;
+  font-size: 13px;
+  line-height: 1.85;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
   overflow-x: hidden;
 }
 
-body {
-  color: var(--foreground);
-  background: var(--background);
-  font-family: Arial, Helvetica, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-}
-
-* {
-  box-sizing: border-box;
-  padding: 0;
-  margin: 0;
+h1, h2, h3, h4, h5, h6 {
+  font-family: var(--font-cormorant), Georgia, serif;
+  font-weight: 300;
+  line-height: 1.05;
 }
 
 a {
@@ -35,8 +45,58 @@ a {
   text-decoration: none;
 }
 
-@media (prefers-color-scheme: dark) {
-  html {
-    color-scheme: dark;
-  }
+button {
+  cursor: none;
+  font-family: var(--font-plex-mono), monospace;
+}
+
+input, textarea, select {
+  cursor: none;
+  font-family: var(--font-plex-mono), monospace;
+}
+
+::selection {
+  background: var(--gold);
+  color: var(--black);
+}
+
+::-webkit-scrollbar {
+  width: 3px;
+}
+::-webkit-scrollbar-track {
+  background: var(--black);
+}
+::-webkit-scrollbar-thumb {
+  background: var(--gold-dim);
+  border-radius: 2px;
+}
+
+/* Utility classes */
+.label {
+  font-family: var(--font-plex-mono), monospace;
+  font-size: 10px;
+  letter-spacing: 0.22em;
+  text-transform: uppercase;
+  color: var(--gold);
+}
+
+.container {
+  max-width: var(--max-width);
+  margin: 0 auto;
+  padding: 0 56px;
+  width: 100%;
+}
+
+.gold-line {
+  width: 40px;
+  height: 1px;
+  background: var(--gold);
+  display: inline-block;
+}
+
+/* Page hero shared styles */
+.page-hero {
+  padding: 200px 56px 100px;
+  max-width: var(--max-width);
+  margin: 0 auto;
 }
