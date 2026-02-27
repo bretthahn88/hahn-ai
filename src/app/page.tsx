@@ -152,20 +152,15 @@ export default function HomePage() {
           {/* Subline */}
           <p
             style={{
-              fontFamily: MONO,
+              fontFamily: 'system-ui, -apple-system, sans-serif',
               fontSize: '1.1rem',
-              lineHeight: 1.95,
+              lineHeight: 1.85,
               color: WD,
               maxWidth: 500,
               marginBottom: 56,
-              letterSpacing: '0.025em',
             }}
           >
-            AI advisory and implementation for organizations
-            <br />
-            that compete on clarity, not buzzwords.
-            <br />
-            Boutique. Rigorous. Accountable.
+            AI advisory and implementation for organizations that compete on clarity, not buzzwords. Boutique. Rigorous. Accountable.
           </p>
 
           {/* CTAs */}
@@ -246,24 +241,25 @@ export default function HomePage() {
         }}
       >
         <div
-          className="grid-2col"
+          className="grid-3col"
           style={{
             maxWidth: 1200,
             margin: '0 auto',
             display: 'grid',
-            gridTemplateColumns: 'repeat(2, 1fr)',
+            gridTemplateColumns: 'repeat(3, 1fr)',
           }}
         >
           {[
             { stat: 'Nationwide', label: 'Service Area' },
             { stat: '20+', label: 'Years of Combined AI Experience' },
+            { stat: 'Family-Led', label: 'Accountability that\'s personal, not contractual.' },
           ].map(({ stat, label }, i) => (
             <div
               key={stat}
               className="card"
               style={{
                 padding: '48px 40px',
-                borderRight: i < 1 ? `1px solid ${BORDER}` : 'none',
+                borderRight: i < 2 ? `1px solid ${BORDER}` : 'none',
               }}
             >
               <div
@@ -475,10 +471,10 @@ export default function HomePage() {
                 maxWidth: 440,
               }}
             >
-              We work with established businesses between $2M and $50M in annual
-              revenue that have real operational complexity — and the discipline
-              to implement solutions that stick. Not every company is ready for
-              AI. We tell you honestly whether you are.
+              We work with established businesses that have real operational
+              complexity and the discipline to implement solutions that stick.
+              Not every company is ready for AI. We tell you honestly whether
+              you are.
             </p>
           </div>
 

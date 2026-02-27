@@ -1,5 +1,4 @@
 import Link from 'next/link'
-import Image from 'next/image'
 
 export default function Footer() {
   const year = new Date().getFullYear()
@@ -23,14 +22,20 @@ export default function Footer() {
       >
         {/* Brand */}
         <div>
-          <Link href="/" style={{ display: 'inline-flex', marginBottom: 20 }}>
-            <Image
-              src="/HahnAI_logo_transparent.png"
-              alt="Hahn AI"
-              height={64}
-              width={0}
-              style={{ width: 'auto', height: 64 }}
-            />
+          <Link
+            href="/"
+            style={{
+              fontFamily: 'var(--font-cormorant)',
+              fontSize: 21,
+              fontWeight: 400,
+              letterSpacing: '0.14em',
+              textTransform: 'uppercase',
+              color: '#F5F5F0',
+              display: 'inline-block',
+              marginBottom: 20,
+            }}
+          >
+            Hahn <span style={{ color: '#C9A84C' }}>AI</span>
           </Link>
           <p
             style={{
