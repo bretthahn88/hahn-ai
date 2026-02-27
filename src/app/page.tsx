@@ -108,6 +108,7 @@ export default function HomePage() {
         >
           {/* Eyebrow */}
           <div
+            className="hero-eyebrow"
             style={{
               fontFamily: MONO,
               fontSize: 10,
@@ -256,7 +257,7 @@ export default function HomePage() {
           ].map(({ stat, label }, i) => (
             <div
               key={stat}
-              className="card"
+              className="card stat-card"
               style={{
                 padding: '48px 40px',
                 borderRight: i < 2 ? `1px solid ${BORDER}` : 'none',
@@ -375,6 +376,7 @@ export default function HomePage() {
                   {s.price}
                 </div>
                 <p
+                  className="card-body"
                   style={{
                     fontFamily: MONO,
                     fontSize: '1.1rem',
@@ -631,6 +633,7 @@ export default function HomePage() {
                   {p.credentials}
                 </div>
                 <p
+                  className="card-body"
                   style={{
                     fontFamily: MONO,
                     fontSize: '1.1rem',

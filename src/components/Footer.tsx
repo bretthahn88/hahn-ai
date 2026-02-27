@@ -46,9 +46,8 @@ export default function Footer() {
               maxWidth: 260,
             }}
           >
-            Boutique AI advisory and implementation for businesses that are
-            ready to operate differently. Three principals. No associates
-            handed your account.
+            AI advisory and implementation for businesses ready to operate
+            differently. Three principals. No associates handed your account.
           </p>
         </div>
 

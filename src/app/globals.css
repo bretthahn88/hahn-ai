@@ -168,6 +168,15 @@ input, textarea, select {
   /* ── Card inner padding ──────────────────────── */
   .card { padding: 32px 24px !important; }
 
+  /* ── Stats band reduced padding ──────────────── */
+  .stat-card { padding-top: 24px !important; padding-bottom: 24px !important; }
+
+  /* ── Hero eyebrow fits one line ──────────────── */
+  .hero-eyebrow { font-size: 8px !important; letter-spacing: 0.08em !important; }
+
+  /* ── Card body text → sans-serif on mobile ───── */
+  .card-body { font-family: system-ui, -apple-system, sans-serif !important; }
+
   /* ── Misc ────────────────────────────────────── */
   html { cursor: auto; }   /* restore default cursor on touch devices */
 }
