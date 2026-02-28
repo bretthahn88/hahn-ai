@@ -12,6 +12,7 @@ const FOUNDERS = [
     index: '01',
     name: 'William Hahn, PhD',
     title: 'AI Research & Technical Architecture',
+    linkedin: 'https://www.linkedin.com/in/william-edward-hahn-532654124/',
     credentials: [
       'Ph.D., Machine Perception, Florida Atlantic University',
       'Co-Director, Machine Perception & Cognitive Robotics Lab (MPCR)',
@@ -29,6 +30,7 @@ const FOUNDERS = [
     index: '02',
     name: 'Brett Hahn',
     title: 'Commercial Strategy & Client Advisory',
+    linkedin: 'https://www.linkedin.com/in/brett-hahn-142b5163/',
     credentials: [
       'Sr. Manager, MarTech Operations, Comcast',
       'Director of CRM Operations, C3 Industries',
@@ -46,6 +48,7 @@ const FOUNDERS = [
     index: '03',
     name: 'Chris Hahn',
     title: 'Implementation & Compliance',
+    linkedin: null,
     credentials: [
       'Technical Deployment Specialist',
       'Quality Management Systems',
@@ -293,6 +296,26 @@ export default function AboutPage() {
                         </span>
                       </div>
                     ))}
+
+                  {/* LinkedIn link */}
+                  {f.linkedin && (
+                    <a
+                      href={f.linkedin}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      style={{
+                        display: 'inline-block',
+                        marginTop: 24,
+                        fontFamily: MONO,
+                        fontSize: 10,
+                        letterSpacing: '0.12em',
+                        textTransform: 'uppercase',
+                        color: G,
+                      }}
+                    >
+                      View LinkedIn Profile →
+                    </a>
+                  )}
                   </div>
                 </div>
 
