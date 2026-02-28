@@ -10,38 +10,42 @@ const SERIF = 'var(--font-cormorant)'
 const FOUNDERS = [
   {
     index: '01',
-    name: 'Dr. William Hahn',
-    title: 'Chief Executive Officer',
+    name: 'William Hahn, PhD',
+    title: 'AI Research & Technical Architecture',
     credentials: [
-      'AI Scientist',
-      'Chief Science Officer — Pure Cipher (AI & National Defense)',
-      'Director — AI & Robotics Lab, Florida Atlantic University',
+      'Ph.D., Machine Perception — Florida Atlantic University',
+      'Co-Director, Machine Perception & Cognitive Robotics Lab (MPCR)',
+      'Co-Founder & CSO, PureCipher (Defense AI)',
+      'Former CEO, VoxelRx (Deep Learning & Medical Imaging)',
+      'B.S. Mathematics & Physics, Guilford College',
     ],
     bio: [
-      'Dr. Hahn brings research-grade rigor to commercial AI deployment. His work at Florida Atlantic University focuses on machine learning systems, autonomous robotics, and applied AI — the same scientific foundation that underlies every Hahn AI engagement.',
-      'At Pure Cipher, he leads AI strategy for defense-grade clients where the cost of error is not measured in revenue. That standard of accountability carries into every SMB engagement Hahn AI accepts.',
-      'He believes most AI consulting is theater. His mandate is to eliminate the gap between what AI can do in a lab and what it actually does for a business.',
+      'William holds a Ph.D. in Machine Perception from Florida Atlantic University, where his doctoral research focused on complex systems and brain sciences. He has been a Research Scientist and Co-Director of the Machine Perception and Cognitive Robotics Laboratory at FAU since 2011 — one of the longest-running applied AI research programs in the region.',
+      'As Co-Founder and Chief Science Officer of PureCipher, he develops AI systems for defense-grade clients where the margin for error is effectively zero.',
+      'Previously, as CEO of VoxelRx, he led the application of deep learning to medical imaging — deploying AI in one of the most regulated and high-stakes environments that exists.',
     ],
   },
   {
     index: '02',
     name: 'Brett Hahn',
-    title: 'Chief Strategy & Growth Officer',
+    title: 'Commercial Strategy & Client Advisory',
     credentials: [
-      '15+ Years in Marketing Technology & CRM',
-      'Digital Transformation & Automation Specialist',
-      '5 Years Consulting — SMB & Mid-Market',
+      'Sr. Manager, MarTech Operations — Comcast',
+      'Director of CRM Operations — C3 Industries',
+      'CRM Leadership — Vail Resorts, Light & Wonder, Caesars Entertainment',
+      'Founder — Indian Lakes Marketing',
     ],
     bio: [
-      'Brett has spent fifteen years at the intersection of technology and commercial operations — implementing marketing automation, CRM systems, and digital transformation initiatives for businesses ranging from local operators to regional enterprises.',
-      'His consulting background means he has seen, firsthand, what happens when technology is implemented without operational alignment. He specializes in identifying where AI creates genuine leverage versus where it creates complexity.',
-      'Brett is responsible for strategy, client relationships, and ensuring every engagement starts with an honest conversation about business value before any technology is discussed.',
+      'Brett has spent fifteen years building and operating data-driven marketing systems at enterprise scale — across some of the most operationally complex and compliance-sensitive industries in the country.',
+      'At Comcast, he led the strategy, governance, and optimization of the residential marketing technology ecosystem as Sr. Manager of MarTech Operations. At C3 Industries, he directed CRM operations across a fast-growing multi-state retail network.',
+      'Earlier in his career, he held CRM leadership roles at Vail Resorts, Light & Wonder, Rivers Casino, and Caesars Entertainment — developing deep expertise in segmentation, lifecycle strategy, and data architecture across regulated environments.',
+      'He founded Indian Lakes Marketing in 2024, a consulting practice focused on helping businesses navigate modern marketing with clarity. At Hahn AI, Brett is responsible for client strategy, commercial positioning, and ensuring every engagement starts with an honest assessment of business value before any technology is discussed.',
     ],
   },
   {
     index: '03',
     name: 'Chris Hahn',
-    title: 'Chief Implementation & Compliance Officer',
+    title: 'Implementation & Compliance',
     credentials: [
       'Technical Deployment Specialist',
       'Quality Management Systems',
@@ -55,20 +59,6 @@ const FOUNDERS = [
   },
 ]
 
-const REGIONS = [
-  {
-    name: 'Northeast Indiana',
-    desc: 'Fort Wayne and surrounding communities. Manufacturing, distribution, healthcare, and professional services.',
-  },
-  {
-    name: 'South Florida',
-    desc: 'Miami-Dade, Broward, and Palm Beach counties. Financial services, real estate, legal, and healthcare.',
-  },
-  {
-    name: 'Eastern North Carolina',
-    desc: 'Raleigh–Durham corridor and coastal communities. Professional services, agriculture tech, and light manufacturing.',
-  },
-]
 
 export default function AboutPage() {
   return (
@@ -112,7 +102,7 @@ export default function AboutPage() {
               maxWidth: 580,
             }}
           >
-            Hahn AI is a boutique advisory firm built around one conviction:
+            Hahn AI is an advisory firm built around one conviction:
             AI implementation should be as rigorous and accountable as the
             businesses it serves. Three principals. No middlemen. No associates
             handed your account.
@@ -167,7 +157,7 @@ export default function AboutPage() {
             <p
               style={{
                 fontFamily: MONO,
-                fontSize: 12,
+                fontSize: '1rem',
                 lineHeight: 2.0,
                 color: WD,
                 marginBottom: 24,
@@ -179,7 +169,7 @@ export default function AboutPage() {
               reputation is attached to every engagement we accept.
             </p>
             <p
-              style={{ fontFamily: MONO, fontSize: 12, lineHeight: 2.0, color: WD }}
+              style={{ fontFamily: MONO, fontSize: '1rem', lineHeight: 2.0, color: WD }}
             >
               We take a limited number of clients at any time. We begin with an
               audit — not a pitch. And we measure success by operational outcomes,
@@ -313,7 +303,7 @@ export default function AboutPage() {
                       key={i}
                       style={{
                         fontFamily: MONO,
-                        fontSize: 12,
+                        fontSize: '1rem',
                         lineHeight: 2.0,
                         color: i === 0 ? WD : 'rgba(245, 245, 240, 0.42)',
                       }}
@@ -322,97 +312,6 @@ export default function AboutPage() {
                     </p>
                   ))}
                 </div>
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      {/* ── REGIONS ──────────────────────────────────────────────────── */}
-      <section
-        className="sec"
-        style={{
-          padding: '96px 56px',
-          borderTop: `1px solid ${BORDER}`,
-          background:
-            'radial-gradient(ellipse at 20% 60%, rgba(201,168,76,0.04) 0%, transparent 65%)',
-        }}
-      >
-        <div style={{ maxWidth: 1200, margin: '0 auto' }}>
-          <div style={{ marginBottom: 56 }}>
-            <div
-              style={{
-                fontFamily: MONO,
-                fontSize: 10,
-                letterSpacing: '0.25em',
-                textTransform: 'uppercase',
-                color: G,
-                marginBottom: 20,
-              }}
-            >
-              // Where We Work
-            </div>
-            <h2
-              style={{
-                fontFamily: SERIF,
-                fontSize: 'clamp(36px, 4.5vw, 52px)',
-                fontWeight: 300,
-                color: W,
-              }}
-            >
-              Three regions.
-              <br />
-              Local presence matters.
-            </h2>
-          </div>
-
-          <div
-            className="grid-3col"
-            style={{
-              display: 'grid',
-              gridTemplateColumns: 'repeat(3, 1fr)',
-              gap: 1,
-              border: `1px solid ${BORDER}`,
-            }}
-          >
-            {REGIONS.map((r, i) => (
-              <div
-                key={r.name}
-                className="card"
-                style={{ padding: '44px 40px', border: `1px solid ${BORDER}` }}
-              >
-                <div
-                  style={{
-                    fontFamily: MONO,
-                    fontSize: 10,
-                    color: 'rgba(201, 168, 76, 0.4)',
-                    letterSpacing: '0.2em',
-                    marginBottom: 16,
-                  }}
-                >
-                  0{i + 1}
-                </div>
-                <h3
-                  style={{
-                    fontFamily: SERIF,
-                    fontSize: 28,
-                    fontWeight: 400,
-                    color: W,
-                    marginBottom: 16,
-                  }}
-                >
-                  {r.name}
-                </h3>
-                <p
-                  style={{
-                    fontFamily: MONO,
-                    fontSize: 11,
-                    lineHeight: 1.95,
-                    color: 'rgba(245, 245, 240, 0.42)',
-                  }}
-                >
-                  {r.desc}
-                </p>
               </div>
             ))}
           </div>

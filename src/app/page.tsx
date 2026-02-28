@@ -49,9 +49,9 @@ const INDUSTRIES = [
 
 const PRINCIPALS = [
   {
-    name: 'Dr. William Hahn',
+    name: 'William Hahn, PhD',
     title: 'AI Research & Technical Architecture',
-    credentials: 'AI Scientist · FAU AI & Robotics Lab · Pure Cipher CSO',
+    credentials: 'Ph.D. Machine Perception · MPCR Lab FAU · PureCipher CSO',
     bio: 'Research-grade AI expertise applied to commercial operations. Brings the rigor of a lab to the discipline of a business.',
   },
   {
