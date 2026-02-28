@@ -32,10 +32,9 @@ const FOUNDERS = [
     title: 'Commercial Strategy & Client Advisory',
     linkedin: 'https://www.linkedin.com/in/brett-hahn-142b5163/',
     credentials: [
-      'Sr. Manager, MarTech Operations, Comcast',
-      'Director of CRM Operations, C3 Industries',
-      'CRM Leadership: Vail Resorts, Light & Wonder, Caesars Entertainment',
+      'CRM & MarTech Leadership: Comcast, Vail Resorts, Caesars Entertainment, C3 Industries',
       'Founder, Indian Lakes Marketing',
+      '5 Years Management Consulting, SMB & Mid-Market',
     ],
     bio: [
       'Brett has spent fifteen years building and operating data-driven marketing systems at enterprise scale, across some of the most operationally complex and compliance-sensitive industries in the country.',
