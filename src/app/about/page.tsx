@@ -13,16 +13,16 @@ const FOUNDERS = [
     name: 'William Hahn, PhD',
     title: 'AI Research & Technical Architecture',
     credentials: [
-      'Ph.D., Machine Perception — Florida Atlantic University',
+      'Ph.D., Machine Perception, Florida Atlantic University',
       'Co-Director, Machine Perception & Cognitive Robotics Lab (MPCR)',
       'Co-Founder & CSO, PureCipher (Defense AI)',
       'Former CEO, VoxelRx (Deep Learning & Medical Imaging)',
       'B.S. Mathematics & Physics, Guilford College',
     ],
     bio: [
-      'William holds a Ph.D. in Machine Perception from Florida Atlantic University, where his doctoral research focused on complex systems and brain sciences. He has been a Research Scientist and Co-Director of the Machine Perception and Cognitive Robotics Laboratory at FAU since 2011 — one of the longest-running applied AI research programs in the region.',
+      'William holds a Ph.D. in Machine Perception from Florida Atlantic University, where his doctoral research focused on complex systems and brain sciences. He has been a Research Scientist and Co-Director of the Machine Perception and Cognitive Robotics Laboratory at FAU since 2011, one of the longest-running applied AI research programs in the region.',
       'As Co-Founder and Chief Science Officer of PureCipher, he develops AI systems for defense-grade clients where the margin for error is effectively zero.',
-      'Previously, as CEO of VoxelRx, he led the application of deep learning to medical imaging — deploying AI in one of the most regulated and high-stakes environments that exists.',
+      'Previously, as CEO of VoxelRx, he led the application of deep learning to medical imaging, deploying AI in one of the most regulated and high-stakes environments that exists.',
     ],
   },
   {
@@ -30,15 +30,15 @@ const FOUNDERS = [
     name: 'Brett Hahn',
     title: 'Commercial Strategy & Client Advisory',
     credentials: [
-      'Sr. Manager, MarTech Operations — Comcast',
-      'Director of CRM Operations — C3 Industries',
-      'CRM Leadership — Vail Resorts, Light & Wonder, Caesars Entertainment',
-      'Founder — Indian Lakes Marketing',
+      'Sr. Manager, MarTech Operations, Comcast',
+      'Director of CRM Operations, C3 Industries',
+      'CRM Leadership: Vail Resorts, Light & Wonder, Caesars Entertainment',
+      'Founder, Indian Lakes Marketing',
     ],
     bio: [
-      'Brett has spent fifteen years building and operating data-driven marketing systems at enterprise scale — across some of the most operationally complex and compliance-sensitive industries in the country.',
+      'Brett has spent fifteen years building and operating data-driven marketing systems at enterprise scale, across some of the most operationally complex and compliance-sensitive industries in the country.',
       'At Comcast, he led the strategy, governance, and optimization of the residential marketing technology ecosystem as Sr. Manager of MarTech Operations. At C3 Industries, he directed CRM operations across a fast-growing multi-state retail network.',
-      'Earlier in his career, he held CRM leadership roles at Vail Resorts, Light & Wonder, Rivers Casino, and Caesars Entertainment — developing deep expertise in segmentation, lifecycle strategy, and data architecture across regulated environments.',
+      'Earlier in his career, he held CRM leadership roles at Vail Resorts, Light & Wonder, Rivers Casino, and Caesars Entertainment, developing deep expertise in segmentation, lifecycle strategy, and data architecture across regulated environments.',
       'He founded Indian Lakes Marketing in 2024, a consulting practice focused on helping businesses navigate modern marketing with clarity. At Hahn AI, Brett is responsible for client strategy, commercial positioning, and ensuring every engagement starts with an honest assessment of business value before any technology is discussed.',
     ],
   },
@@ -52,7 +52,7 @@ const FOUNDERS = [
       'Regulatory Compliance & Operational Systems',
     ],
     bio: [
-      'Chris is responsible for what actually ships. His background in quality management and regulatory compliance means he approaches every implementation with a systems mindset — mapping dependencies, documenting processes, and building for auditability from the start.',
+      'Chris is responsible for what actually ships. His background in quality management and regulatory compliance means he approaches every implementation with a systems mindset: mapping dependencies, documenting processes, and building for auditability from the start.',
       'In regulated industries, documentation is not optional. Chris ensures that AI implementations meet the compliance requirements of healthcare, financial services, and other regulated verticals without sacrificing operational effectiveness.',
       'Every Hahn AI deliverable is documented to the standard that Chris sets. Your team can maintain it. Your auditors can review it. And if circumstances change, you are not dependent on us to keep it running.',
     ],
@@ -165,14 +165,14 @@ export default function AboutPage() {
             >
               Vendors sell software. Generalist consultants sell hours. Neither
               has a stake in whether the AI actually performs. Hahn AI is built
-              differently. We are principals — not account managers — and our
+              differently. We are principals, not account managers, and our
               reputation is attached to every engagement we accept.
             </p>
             <p
               style={{ fontFamily: MONO, fontSize: '1rem', lineHeight: 2.0, color: WD }}
             >
               We take a limited number of clients at any time. We begin with an
-              audit — not a pitch. And we measure success by operational outcomes,
+              audit, not a pitch. And we measure success by operational outcomes,
               not by the number of tools installed.
             </p>
           </div>

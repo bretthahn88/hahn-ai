@@ -107,7 +107,7 @@ input, textarea, select {
 }
 
 /* ─────────────────────────────────────────────────────────
-   RESPONSIVE SYSTEM — breakpoint ≤ 768px
+   RESPONSIVE SYSTEM, breakpoint ≤ 768px
    !important overrides inline styles in JSX components.
 ───────────────────────────────────────────────────────── */
 

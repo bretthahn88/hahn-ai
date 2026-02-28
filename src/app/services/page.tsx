@@ -14,7 +14,7 @@ const SERVICES = [
     price: '$2,500 – $5,000',
     timeline: '2 – 3 weeks',
     deliverable: 'Written assessment with prioritized AI opportunities and risk factors',
-    desc: 'Before any implementation, you need an honest picture of where your business actually stands. We conduct a structured review of your current operations, software stack, data quality, and team capacity. No vendor agenda. No upsell pressure. A clear, written assessment you can act on — with or without us.',
+    desc: 'Before any implementation, you need an honest picture of where your business actually stands. We conduct a structured review of your current operations, software stack, data quality, and team capacity. No vendor agenda. No upsell pressure. A clear, written assessment you can act on, with or without us.',
     includes: [
       'Operations and workflow mapping',
       'Software and data infrastructure review',
@@ -30,7 +30,7 @@ const SERVICES = [
     price: '$5,000 – $25,000+',
     timeline: '4 – 12 weeks',
     deliverable: 'Deployed AI system with documentation and team training',
-    desc: 'We handle the full deployment lifecycle — from scoping and vendor selection through integration, testing, and team training. Every implementation is documented, tested against your actual workflows, and handed off with your team trained to maintain it. No black boxes.',
+    desc: 'We handle the full deployment lifecycle: from scoping and vendor selection through integration, testing, and team training. Every implementation is documented, tested against your actual workflows, and handed off with your team trained to maintain it. No black boxes.',
     includes: [
       'Implementation scoping and vendor selection',
       'Integration with existing systems and workflows',
@@ -46,7 +46,7 @@ const SERVICES = [
     price: '$2,000 – $6,000 / month',
     timeline: 'Engagement reviewed quarterly.',
     deliverable: 'Monthly reviews, quarterly roadmap, and priority access to principals',
-    desc: 'AI is not a one-time installation. Markets shift, models improve, your operations evolve. The retainer keeps a principal accountable to your strategy on an ongoing basis — monthly performance reviews, vendor oversight, optimization priorities, and a quarterly roadmap update.',
+    desc: 'AI is not a one-time installation. Markets shift, models improve, your operations evolve. The retainer keeps a principal accountable to your strategy on an ongoing basis: monthly performance reviews, vendor oversight, optimization priorities, and a quarterly roadmap update.',
     includes: [
       'Monthly strategy and performance review',
       'Ongoing vendor and tool oversight',
@@ -88,7 +88,7 @@ const PROCESS = [
   {
     step: '03',
     title: 'Implementation or Retainer',
-    desc: 'Based on audit findings, we scope the appropriate engagement — implementation project, advisory retainer, or both. You approve all work before it begins.',
+    desc: 'Based on audit findings, we scope the appropriate engagement: implementation project, advisory retainer, or both. You approve all work before it begins.',
   },
   {
     step: '04',

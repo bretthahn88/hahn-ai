@@ -316,7 +316,7 @@ export default function ContactPage() {
                     value={form.challenge}
                     onChange={handleChange}
                     required
-                    placeholder="Describe the operational challenge or business goal you're trying to address. Be specific — vague inquiries get vague answers."
+                    placeholder="Describe the operational challenge or business goal you're trying to address. Be specific. Vague inquiries get vague answers."
                   />
                 </div>
 

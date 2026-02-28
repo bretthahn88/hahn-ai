@@ -112,7 +112,7 @@ export default function Navigation() {
           </Link>
         </div>
 
-        {/* Hamburger — mobile only */}
+        {/* Hamburger, mobile only */}
         <button
           className="nav-hamburger"
           onClick={() => setMenuOpen(!menuOpen)}

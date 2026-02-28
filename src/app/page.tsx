@@ -20,7 +20,7 @@ const SERVICES = [
     index: '02',
     name: 'AI Implementation\n& Integration',
     price: '$5,000 – $25,000+',
-    desc: 'End-to-end deployment of AI tools and automations into your existing workflows — scoping, vendor selection, integration, testing, and team training.',
+    desc: 'End-to-end deployment of AI tools and automations into your existing workflows: scoping, vendor selection, integration, testing, and team training.',
   },
   {
     index: '03',
@@ -45,6 +45,10 @@ const INDUSTRIES = [
   'Real Estate',
   'Professional Services',
   'Regulated Industries',
+  'Retail & E-Commerce',
+  'Consumer Brands',
+  'Hospitality & Travel',
+  'Gaming & Entertainment',
 ]
 
 const PRINCIPALS = [
@@ -530,7 +534,7 @@ export default function HomePage() {
                 }}
               >
                 &ldquo;Not every company is ready for AI. We tell you
-                honestly whether you are — and what it would take to get
+                honestly whether you are. And what it would take to get
                 there.&rdquo;
               </p>
             </div>

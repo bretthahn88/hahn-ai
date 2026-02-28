@@ -21,7 +21,7 @@ const plexMono = IBM_Plex_Mono({
 })
 
 export const metadata: Metadata = {
-  title: 'Hahn AI — Intelligence, Applied.',
+  title: 'Hahn AI: Intelligence, Applied.',
   description:
     'AI advisory and implementation for organizations that compete on clarity, not buzzwords. Workflow-first. Rigorous. Accountable.',
   keywords:
@@ -30,7 +30,7 @@ export const metadata: Metadata = {
     icon: '/favicon.png',
   },
   openGraph: {
-    title: 'Hahn AI — Intelligence, Applied.',
+    title: 'Hahn AI: Intelligence, Applied.',
     description:
       'AI advisory and implementation for organizations that compete on clarity, not buzzwords. Workflow-first. Rigorous. Accountable.',
     type: 'website',
