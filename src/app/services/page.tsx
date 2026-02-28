@@ -44,7 +44,7 @@ const SERVICES = [
     index: '03',
     name: 'Ongoing AI Advisory Retainer',
     price: '$2,000 – $6,000 / month',
-    timeline: 'Minimum 3-month engagement',
+    timeline: 'Engagement reviewed quarterly.',
     deliverable: 'Monthly reviews, quarterly roadmap, and priority access to principals',
     desc: 'AI is not a one-time installation. Markets shift, models improve, your operations evolve. The retainer keeps a principal accountable to your strategy on an ongoing basis — monthly performance reviews, vendor oversight, optimization priorities, and a quarterly roadmap update.',
     includes: [
@@ -140,8 +140,7 @@ export default function ServicesPage() {
             }}
           >
             Four defined engagements. Each scoped to your actual requirements.
-            No subscriptions to software you never use. No retainers for
-            strategies that never ship.
+            No vendor agendas. No tool pitches. Just disciplined execution.
           </p>
         </div>
       </section>
@@ -253,7 +252,7 @@ export default function ServicesPage() {
                   <p
                     style={{
                       fontFamily: MONO,
-                      fontSize: 12,
+                      fontSize: '1rem',
                       lineHeight: 2.0,
                       color: WD,
                       marginBottom: 36,
@@ -292,7 +291,7 @@ export default function ServicesPage() {
                         <span
                           style={{
                             fontFamily: MONO,
-                            fontSize: 11,
+                            fontSize: '0.95rem',
                             color: 'rgba(245, 245, 240, 0.5)',
                             lineHeight: 1.8,
                           }}
@@ -426,7 +425,7 @@ export default function ServicesPage() {
                 marginBottom: 16,
               }}
             >
-              Ready to begin?
+              Ready to find out where AI actually fits?
             </h2>
             <p
               style={{ fontFamily: MONO, fontSize: 11, color: WD, letterSpacing: '0.04em' }}
