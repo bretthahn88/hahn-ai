@@ -26,6 +26,10 @@ export const metadata: Metadata = {
     'AI advisory and implementation for organizations that compete on clarity, not buzzwords. Workflow-first. Rigorous. Accountable.',
   keywords:
     'AI advisory, AI implementation, SMB AI consulting, workflow automation, AI integration, boutique AI firm',
+  icons: {
+    icon: '/favicon.png',
+    apple: '/favicon.png',
+  },
   openGraph: {
     title: 'Hahn AI — Intelligence, Applied.',
     description:
