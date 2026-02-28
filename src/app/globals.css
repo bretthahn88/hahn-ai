@@ -101,6 +101,89 @@ input, textarea, select {
   margin: 0 auto;
 }
 
+/* ── Blog prose styles ──────────────────────────────────────────── */
+.prose p {
+  font-family: var(--font-plex-mono), monospace;
+  font-size: 1rem;
+  line-height: 2.0;
+  color: rgba(245, 245, 240, 0.55);
+  margin-bottom: 1.75rem;
+}
+
+.prose h2 {
+  font-family: var(--font-cormorant), Georgia, serif;
+  font-size: clamp(28px, 3vw, 40px);
+  font-weight: 300;
+  color: #F5F5F0;
+  line-height: 1.1;
+  margin-top: 3rem;
+  margin-bottom: 1.25rem;
+}
+
+.prose h3 {
+  font-family: var(--font-cormorant), Georgia, serif;
+  font-size: clamp(22px, 2.5vw, 30px);
+  font-weight: 400;
+  color: #F5F5F0;
+  line-height: 1.15;
+  margin-top: 2.25rem;
+  margin-bottom: 1rem;
+}
+
+.prose strong {
+  color: rgba(245, 245, 240, 0.85);
+  font-weight: 500;
+}
+
+.prose em {
+  color: #C9A84C;
+  font-style: italic;
+}
+
+.prose ul, .prose ol {
+  padding-left: 1.5rem;
+  margin-bottom: 1.75rem;
+}
+
+.prose li {
+  font-family: var(--font-plex-mono), monospace;
+  font-size: 1rem;
+  line-height: 2.0;
+  color: rgba(245, 245, 240, 0.55);
+  margin-bottom: 0.5rem;
+}
+
+.prose ul li::marker {
+  color: #C9A84C;
+}
+
+.prose ol li::marker {
+  color: rgba(245, 245, 240, 0.3);
+}
+
+.prose blockquote {
+  border-left: 2px solid #C9A84C;
+  padding-left: 1.5rem;
+  margin: 2rem 0;
+  color: rgba(245, 245, 240, 0.42);
+  font-style: italic;
+}
+
+.prose code {
+  font-family: var(--font-plex-mono), monospace;
+  font-size: 0.9rem;
+  background: rgba(201, 168, 76, 0.07);
+  color: #C9A84C;
+  padding: 2px 6px;
+  border-radius: 2px;
+}
+
+.prose hr {
+  border: none;
+  border-top: 1px solid rgba(201, 168, 76, 0.14);
+  margin: 3rem 0;
+}
+
 /* Hide custom cursor on touch/pointer-none devices */
 @media (hover: none) {
   .cursor, .cursor-ring { display: none !important; }
