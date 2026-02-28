@@ -101,6 +101,11 @@ input, textarea, select {
   margin: 0 auto;
 }
 
+/* Hide custom cursor on touch/pointer-none devices */
+@media (hover: none) {
+  .cursor, .cursor-ring { display: none !important; }
+}
+
 /* ─────────────────────────────────────────────────────────
    RESPONSIVE SYSTEM — breakpoint ≤ 768px
    !important overrides inline styles in JSX components.
@@ -172,7 +177,8 @@ input, textarea, select {
   .stat-card { padding-top: 24px !important; padding-bottom: 24px !important; }
 
   /* ── Hero eyebrow fits one line ──────────────── */
-  .hero-eyebrow { font-size: 8px !important; letter-spacing: 0.08em !important; }
+  .hero-eyebrow { font-size: 0.85rem !important; letter-spacing: 0.02em !important; gap: 0 !important; }
+  .hero-eyebrow-line { display: none !important; }
 
   /* ── Card body text → sans-serif on mobile ───── */
   .card-body { font-family: system-ui, -apple-system, sans-serif !important; }

@@ -122,6 +122,7 @@ export default function HomePage() {
             }}
           >
             <span
+              className="hero-eyebrow-line"
               style={{
                 width: 36,
                 height: 1,
@@ -161,7 +162,7 @@ export default function HomePage() {
               marginBottom: 56,
             }}
           >
-            AI advisory and implementation for organizations that compete on clarity, not buzzwords. Boutique. Rigorous. Accountable.
+            AI advisory and implementation for organizations that compete on clarity, not buzzwords. Rigorous. Accountable.
           </p>
 
           {/* CTAs */}

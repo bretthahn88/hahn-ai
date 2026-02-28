@@ -21,11 +21,17 @@ const plexMono = IBM_Plex_Mono({
 })
 
 export const metadata: Metadata = {
-  title: 'Hahn AI — Boutique AI Advisory',
+  title: 'Hahn AI — Intelligence, Applied.',
   description:
-    'AI advisory and implementation for organizations that compete on clarity, not buzzwords. Serving SMBs in Northeast Indiana, South Florida, and Eastern North Carolina.',
+    'AI advisory and implementation for organizations that compete on clarity, not buzzwords. Workflow-first. Rigorous. Accountable.',
   keywords:
-    'AI advisory, AI implementation, SMB AI consulting, workflow automation, AI integration, Northeast Indiana, South Florida, Eastern North Carolina',
+    'AI advisory, AI implementation, SMB AI consulting, workflow automation, AI integration, boutique AI firm',
+  openGraph: {
+    title: 'Hahn AI — Intelligence, Applied.',
+    description:
+      'AI advisory and implementation for organizations that compete on clarity, not buzzwords. Workflow-first. Rigorous. Accountable.',
+    type: 'website',
+  },
 }
 
 export default function RootLayout({
