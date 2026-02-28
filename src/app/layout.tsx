@@ -27,8 +27,7 @@ export const metadata: Metadata = {
   keywords:
     'AI advisory, AI implementation, SMB AI consulting, workflow automation, AI integration, boutique AI firm',
   icons: {
-    icon: [{ url: '/favicon.png', type: 'image/png' }],
-    apple: '/favicon.png',
+    icon: '/favicon.png',
   },
   openGraph: {
     title: 'Hahn AI — Intelligence, Applied.',
@@ -46,6 +45,7 @@ export default function RootLayout({
   return (
     <html lang="en" className={`${cormorant.variable} ${plexMono.variable}`}>
       <head>
+        <link rel="shortcut icon" href="/favicon.png" type="image/png" />
         <link rel="icon" type="image/png" href="/favicon.png" />
         <link rel="apple-touch-icon" href="/favicon.png" />
       </head>
