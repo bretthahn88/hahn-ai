@@ -52,6 +52,8 @@ const NEXT_STEPS = [
 
 export default function ContactPage() {
   const [submitted, setSubmitted] = useState(false)
+  const [submitting, setSubmitting] = useState(false)
+  const [error, setError] = useState('')
   const [form, setForm] = useState({
     name: '',
     company: '',
@@ -69,9 +71,26 @@ export default function ContactPage() {
     setForm((prev) => ({ ...prev, [e.target.name]: e.target.value }))
   }
 
-  const handleSubmit = (e: React.FormEvent) => {
+  const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault()
-    setSubmitted(true)
+    setSubmitting(true)
+    setError('')
+    try {
+      const res = await fetch('https://formspree.io/f/xdaljpgl', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json', Accept: 'application/json' },
+        body: JSON.stringify(form),
+      })
+      if (res.ok) {
+        setSubmitted(true)
+      } else {
+        setError('Something went wrong. Please email us directly at hello@indianlakesmarketing.com.')
+      }
+    } catch {
+      setError('Something went wrong. Please email us directly at hello@indianlakesmarketing.com.')
+    } finally {
+      setSubmitting(false)
+    }
   }
 
   return (
@@ -313,6 +332,21 @@ export default function ContactPage() {
                   />
                 </div>
 
+                {/* Error message */}
+                {error && (
+                  <p
+                    style={{
+                      fontFamily: MONO,
+                      fontSize: 11,
+                      lineHeight: 1.85,
+                      color: 'rgba(245, 100, 100, 0.85)',
+                      letterSpacing: '0.03em',
+                    }}
+                  >
+                    {error}
+                  </p>
+                )}
+
                 {/* Submit */}
                 <div
                   className="cta-row"
@@ -336,6 +370,7 @@ export default function ContactPage() {
                   </span>
                   <button
                     type="submit"
+                    disabled={submitting}
                     className="btn-full"
                     style={{
                       fontFamily: MONO,
@@ -343,13 +378,14 @@ export default function ContactPage() {
                       letterSpacing: '0.16em',
                       textTransform: 'uppercase',
                       padding: '14px 36px',
-                      background: G,
+                      background: submitting ? 'rgba(201, 168, 76, 0.5)' : G,
                       color: '#080808',
                       fontWeight: 500,
                       border: 'none',
+                      opacity: submitting ? 0.7 : 1,
                     }}
                   >
-                    Submit Inquiry →
+                    {submitting ? 'Sending…' : 'Submit Inquiry →'}
                   </button>
                 </div>
               </div>
