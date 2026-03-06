@@ -13,25 +13,21 @@ const SERVICES = [
   {
     index: '01',
     name: 'AI Readiness &\nWorkflow Audit',
-    price: '$2,500 – $5,000',
     desc: 'A structured review of your operations, software stack, data quality, and team capacity. Delivered as a written assessment with prioritized opportunities.',
   },
   {
     index: '02',
     name: 'AI Implementation\n& Integration',
-    price: '$5,000 – $25,000+',
     desc: 'End-to-end deployment of AI tools and automations into your existing workflows: scoping, vendor selection, integration, testing, and team training.',
   },
   {
     index: '03',
     name: 'Ongoing AI\nAdvisory Retainer',
-    price: '$2,000 – $6,000 / mo',
     desc: 'Strategic guidance, vendor oversight, and continuous optimization. Monthly reviews, priority access, and quarterly roadmap updates.',
   },
   {
     index: '04',
     name: 'Custom AI\nDevelopment',
-    price: 'Scoped individually',
     desc: 'Proprietary model development, custom tooling, and specialized integrations for organizations with unique operational requirements.',
   },
 ]
@@ -370,16 +366,6 @@ export default function HomePage() {
                 >
                   {s.name}
                 </h3>
-                <div
-                  style={{
-                    fontFamily: MONO,
-                    fontSize: 11,
-                    color: G,
-                    letterSpacing: '0.08em',
-                  }}
-                >
-                  {s.price}
-                </div>
                 <p
                   className="card-body"
                   style={{

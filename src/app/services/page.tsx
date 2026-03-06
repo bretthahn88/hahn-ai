@@ -11,7 +11,6 @@ const SERVICES = [
   {
     index: '01',
     name: 'AI Readiness & Workflow Audit',
-    price: '$2,500 – $5,000',
     timeline: '2 – 3 weeks',
     deliverable: 'Written assessment with prioritized AI opportunities and risk factors',
     desc: 'Before any implementation, you need an honest picture of where your business actually stands. We conduct a structured review of your current operations, software stack, data quality, and team capacity. No vendor agenda. No upsell pressure. A clear, written assessment you can act on, with or without us.',
@@ -27,7 +26,6 @@ const SERVICES = [
   {
     index: '02',
     name: 'AI Implementation & Integration',
-    price: '$5,000 – $25,000+',
     timeline: '4 – 12 weeks',
     deliverable: 'Deployed AI system with documentation and team training',
     desc: 'We handle the full deployment lifecycle: from scoping and vendor selection through integration, testing, and team training. Every implementation is documented, tested against your actual workflows, and handed off with your team trained to maintain it. No black boxes.',
@@ -43,7 +41,6 @@ const SERVICES = [
   {
     index: '03',
     name: 'Ongoing AI Advisory Retainer',
-    price: '$2,000 – $6,000 / month',
     timeline: 'Engagement reviewed quarterly.',
     deliverable: 'Monthly reviews, quarterly roadmap, and priority access to principals',
     desc: 'AI is not a one-time installation. Markets shift, models improve, your operations evolve. The retainer keeps a principal accountable to your strategy on an ongoing basis: monthly performance reviews, vendor oversight, optimization priorities, and a quarterly roadmap update.',
@@ -59,7 +56,6 @@ const SERVICES = [
   {
     index: '04',
     name: 'Custom AI Development',
-    price: 'Scoped individually',
     timeline: 'Determined after discovery',
     deliverable: 'Proprietary AI tooling built to your operational requirements',
     desc: 'Some organizations have operational requirements that off-the-shelf AI products cannot meet. We scope, design, and build proprietary AI models, tools, and integrations where genuine custom development is warranted. Engagements begin with a paid discovery and scoping phase.',
@@ -187,17 +183,6 @@ export default function ServicesPage() {
                   >
                     {s.name}
                   </h2>
-                  <div
-                    style={{
-                      fontFamily: MONO,
-                      fontSize: 13,
-                      color: G,
-                      letterSpacing: '0.06em',
-                      marginBottom: 10,
-                    }}
-                  >
-                    {s.price}
-                  </div>
                   <div style={{ marginBottom: 32 }}>
                     <div
                       style={{
